@@ -25,11 +25,11 @@ module.exports = (grunt) ->
         'src/**/*.coffee'
         'test/**/*.coffee'
       ]
-      tasks: 'default'
+      tasks: 'test'
 
   grunt.loadNpmTasks 'grunt-simple-mocha'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
   grunt.registerTask 'test', 'simplemocha'
-  grunt.registerTask 'default', ['coffee', 'simplemocha']
+  grunt.registerTask 'default', ['coffee', 'test']

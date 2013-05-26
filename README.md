@@ -1,6 +1,6 @@
 # grunt-init-node-coffee
 
-> Create a CoffeeScript node module with [grunt-init][], including Mocha tests.
+> Create a node module in CoffeeScript with [grunt-init][], including Mocha tests.
 
 [grunt-init]: http://gruntjs.com/project-scaffolding
 
