@@ -32,4 +32,4 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
   grunt.registerTask 'test', 'simplemocha'
-  grunt.registerTask 'default', ['coffee', 'test']
+  grunt.registerTask 'default', 'test'
