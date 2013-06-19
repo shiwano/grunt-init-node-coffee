@@ -34,7 +34,13 @@ exports.template = function(grunt, init, done) {
     init.prompt('author_email'),
     init.prompt('author_url'),
     init.prompt('node_version'),
-    init.prompt('main')
+    init.prompt('main'),
+    {
+      name: 'travis',
+      message: 'Will this project be tested with Travis CI?',
+      default: 'Y/n',
+      warning: 'If selected, you must enable Travis support for this project in https://travis-ci.org/profile'
+    }
   ], function(err, props) {
     props.keywords = [];
 
@@ -52,6 +58,8 @@ exports.template = function(grunt, init, done) {
       "chai": "~1.6.0",
       'sinon-chai': '~2.4.0'
     };
+
+    props.travis = /y/i.test(props.travis);
 
     props.peerDependencies = {
       "grunt": '~' + grunt.version
